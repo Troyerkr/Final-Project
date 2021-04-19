@@ -1,12 +1,19 @@
-import java.utill.*;
+import java.util.*;
 
 public class Question {
  private String qText;
- private Arraylist answers;
+ private ArrayList<String> answers;
  private int aIndex;
  private int qValue;
  
- void Question(String question, Arraylist aList, int correct, int points){
+ public Question(){
+   qText = "";
+   answers = new ArrayList<String>();
+   aIndex = 0;
+   qValue = 0;
+ }
+ 
+ public Question(String question, ArrayList<String> aList, int correct, int points){
    qText = question;
    answers = aList;
    aIndex = correct;
@@ -17,12 +24,12 @@ public class Question {
    return qText;
  }
 
-  public Arraylist getAnswers(){
+  public ArrayList<String> getAnswers(){
    return answers;
  }
 
   public String getAnswers(int qNumber){
-    x = qNumber - 1;
+    int x = qNumber - 1;
    return answers.get(x);
  }
 
