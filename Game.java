@@ -14,6 +14,7 @@ public class Game /*implements  ActionListener */ {
   Game(int manyQuestions, String playerName){
   try{
       Player p = new Player(playerName);
+
       current = 0;
       FileReader fR = new FileReader("trivia.txt");
       BufferedReader reader = new BufferedReader(fR);
@@ -32,14 +33,14 @@ public class Game /*implements  ActionListener */ {
         answers.add(a3);
         Question q = new Question(question,answers,aIndex,points);
         bigList.add(q);
-        /*print out what it reads
+        //print out what it reads
         System.out.println(question);
         System.out.println(a1);
         System.out.println(a2);
         System.out.println(a3);
         System.out.println(a4);
         System.out.println(aIndex);
-        System.out.println(points);*/
+        System.out.println(points);
   }
       reader.close();
   }catch(IOException e){
@@ -52,9 +53,9 @@ public class Game /*implements  ActionListener */ {
     currentAs = qlist.get(current).getAnswers();
     currentAindex = qlist.get(current).getCorrect();
     currentQscore = qlist.get(current).getValue();
-
+    /*
     //make this trigger on the next question button
-    private nextQuestion(int maxQuestion){
+    private void nextQuestion(int maxQuestion){
       //hide screen
       //check if they answerd correctly
       // add value to scores
@@ -68,8 +69,8 @@ public class Game /*implements  ActionListener */ {
         currentQscore = qlist.get(current).getValue();
       }
       //reprint the screen
-    } 
-
+    }*/ 
+    
   }
   
 
