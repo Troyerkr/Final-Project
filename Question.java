@@ -5,7 +5,7 @@ public class Question {
  private ArrayList<String> answers;
  private int aIndex;
  private int qValue;
-                                                                        
+ 
  public Question(){
    qText = "";
    answers = new ArrayList<String>();

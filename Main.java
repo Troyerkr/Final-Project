@@ -6,7 +6,7 @@ class Main {
  public static void main(String args[]) {
    SwingUtilities.invokeLater(new Runnable() {
      public void run() {
-       Game g = new Game(10,"this is painful");
+       Game g = new Game(1,2);
      }
    });
  }

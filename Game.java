@@ -5,19 +5,22 @@ import java.awt.*; import java.lang.*;
 public class Game /*implements  ActionListener */ {
   private ArrayList<Question> qList = new ArrayList<Question>();
   private ArrayList<Question> bigList = new ArrayList<Question>();
-  //use this to index the question list  
-  private int current, currentQscore, currentAindex;
+  private int current, currentCorrect, currentValue;
+  private String currentQText;
   private ArrayList<String> currentAs;
-  private String currentQTxt;
-  //there are 47 questions total
-  //we could think of 3 for 50
-  Game(int manyQuestions, String playerName){
-  try{
-      Player p = new Player(playerName);
+  private String playerName;
+  private int manyQuestions;
+  
+  public Game(){
+  
 
-      current = 0;
+  }
+
+  public void startGame(){
+  try{
       FileReader fR = new FileReader("trivia.txt");
       BufferedReader reader = new BufferedReader(fR);
+      
       while(reader.ready()){
         String question = reader.readLine();
         String a1 = reader.readLine();
@@ -26,7 +29,7 @@ public class Game /*implements  ActionListener */ {
         String a4 = reader.readLine();
         int aIndex = Integer.parseInt(reader.readLine());
         int points = Integer.parseInt(reader.readLine());
-
+    
         ArrayList<String> answers = new ArrayList<String>();
         answers.add(a1);
         answers.add(a2);
@@ -49,30 +52,32 @@ public class Game /*implements  ActionListener */ {
     for (int i = 0; i < manyQuestions; i++) {
       qList.add(bigList.get(i));
     }
-    currentQTxt = qlist.get(current).getQuestion();
-    currentAs = qlist.get(current).getAnswers();
-    currentAindex = qlist.get(current).getCorrect();
-    currentQscore = qlist.get(current).getValue();
-    /*
-    //make this trigger on the next question button
-    private void nextQuestion(int maxQuestion){
-      //hide screen
-      //check if they answerd correctly
-      // add value to scores
-      if (current == maxQuestion){
-        //whatever the end screen is
-      }else{
-        current++
-        currentQTxt = qlist.get(current).getQuestion();
-        currentAs = qlist.get(current).getAnswers();
-        currentAindex = qlist.get(current).getCorrect();
-        currentQscore = qlist.get(current).getValue();
-      }
-      //reprint the screen
-    }*/ 
-    
+    current = 0;
+    currentQText = qList.get(current).getQuestion();
+    currentAs = qList.get(current).getAnswers();
+    currentCorrect = qList.get(current).getCorrect();
+    currentValue = qList.get(current).getValue();
+    //run next screen method
   }
-  
+  public void nextScreen(){
+    if (current == manyQuestions){
+      //Final Screen stuff
+    }
+    else{
+      current ++;
+      currentQText = qList.get(current).getQuestion();
+      currentAs = qList.get(current).getAnswers();
+      currentCorrect = qList.get(current).getCorrect();
+      currentValue = qList.get(current).getValue();
+      //print screen stuff
+
+
+
+
+
+    }
+
+  }
 
 }
 
