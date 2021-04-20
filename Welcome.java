@@ -5,7 +5,7 @@
 //four JButtons that contain one of the answer options
 //JLabel that displays what the user's current score is
 //JButton for next question
-
+/*
 
 import java.awt.*;
 import java.awt.event.*;
@@ -14,7 +14,8 @@ import javax.swing.*;
 public class Game implements ActionListener 
 {
 
-  String userValue = "";
+  String playerName = "";
+  JLabel jlabWelcome; //wString playerName = "";
   JLabel jlabWelcome; //welcomes the player 
   JButton answerOne, answerTwo, answerThree, answerFour; //sets up the buttons used to choose your four possible answers
   JFrame frame = new JFrame("Group 11 Trivia Game");
@@ -22,6 +23,8 @@ public class Game implements ActionListener
   JLabel jlabRange, jlabLastGuess, jlabIntro, jlabQuestion, jlabPoints, currentScore, addressUser;
   JTextField userName, numQuestions;
   JButton submitName, nextQuestion;
+  String[] chooseQuestions = {"10", "25", "50", "75", "100"};
+  JComboBox numQuestions;
     Welcome() 
     {       
        
@@ -73,12 +76,18 @@ public class Game implements ActionListener
     submitName.addActionListener(this);
     frame.add(submitName, c);
 
+    numQuestions = new JComboBox(chooseQuestions);
+
+    c.gridx = 3;
+    c.gridy = 2;
+    frame.add(numQuestions, c);
+
 
     //
     //Seperate Game Window Frame
     //
 
-    addressUser = new JLabel("Hello " + userValue + "!");
+    addressUser = new JLabel("Hello " + playerName + "!");
     jlabQuestion = new JLabel("Question: ");
     jlabPoints = new JLabel("Points: ");
     answerOne = new JButton("Answer 1");
@@ -170,13 +179,11 @@ public class Game implements ActionListener
     if(ae.getActionCommand().equals("Submit")) 
     { 
       frame.setVisible(false);
-      userValue = userName.getText();
-      System.out.println(userValue);
-      addressUser.setText("Hello "+ userValue + "!  Thanks for playing!");
+      playerName = userName.getText();
+      System.out.println(playerName);
+      addressUser.setText("Hello "+ playerName + "!  Thanks for playing!");
       gameFrame.setVisible(true);
     }
-
-    
   }
   
 } 

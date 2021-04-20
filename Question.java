@@ -34,10 +34,10 @@ public class Question {
  }
 
   public int getCorrect(){
-    return qValue;
+    return aIndex;
   }
 
     public int getValue(){
-    return aIndex;
+    return qValue;
   }
 }

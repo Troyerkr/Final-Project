@@ -299,4 +299,24 @@ Shutter Island
 Inception
 2
 100
-
+Which of these US Presidents served most recently?
+John Quincy Adams
+William Henery Harrison
+Andrew Johnson
+James Buchanan
+3
+100
+Which of these Country's Men's Soccer team have  won a world cup?
+Portugal
+Netherlands
+Uruguay
+Russia
+3
+100
+How many teams are in the NFL
+32
+30
+34
+28
+1
+50
