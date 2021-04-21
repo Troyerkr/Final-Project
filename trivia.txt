@@ -313,10 +313,38 @@ Uruguay
 Russia
 3
 100
-How many teams are in the NFL
+How many teams are in the NFL?
 32
 30
 34
 28
 1
 50
+If you go to a bakery and order a baker's dozen, how many baked goods will you get?
+15
+13
+12
+24
+2
+50
+Which of these countries are not a member state of the European Union?
+Latvia
+Cyprus
+Portugal
+Switzerland
+4
+50
+What team was the AFL team to win the Super Bowl?
+The Kansas City Chiefs
+The The Minnesota Vikings
+The New York Jets
+The Dallas Cowboys
+3
+100
+How many seasons were there of the US version of the TV show "The Office" 
+9
+7
+8
+11
+1
+100
