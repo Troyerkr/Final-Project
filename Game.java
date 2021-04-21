@@ -457,6 +457,7 @@ private void endGame(){
   endFrame.setLayout(new FlowLayout());
   endFrame.setVisible(true);
   finalLbl = new JLabel("Congratulations " + player.getName() + "! your final score was " + player.getScore() + "!");
+  finalLbl.setForeground(Color.green);
 
   endFrame.add(finalLbl);
   endFrame.add(sp);

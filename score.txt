@@ -13,3 +13,5 @@ Player: sam -- Score: 800 -- # of Question: 10 -- Date/Time: 04/20/2021 22:21 --
 Player: grady -- Score: 800 -- # of Question: 10 -- Date/Time: 04/20/2021 22:27 -- 
 Player: Kyle -- Score: 200 -- # of Question: 10 -- Date/Time: 04/20/2021 23:48 -- 
 Player: Kyle -- Score: 800 -- # of Question: 10 -- Date: 04/20/2021
+Player: grady -- Score: 800 -- # of Question: 10 -- Date: 04/20/2021
+Player: Sam -- Score: 800 -- # of Question: 10 -- Date: 04/21/2021
